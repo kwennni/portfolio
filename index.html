@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queen Danica Mae D. Llagas | IT Student Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <div class="bg-decor" aria-hidden="true">
+    <span class="decor-mark mark-1">✿</span>
+    <span class="decor-mark mark-2">✧</span>
+    <span class="decor-mark mark-3">✦</span>
+        <span class="decor-mark mark-4">✿</span>
+    <span class="decor-mark mark-5">✧</span>
+    <span class="decor-mark mark-6">✦</span>
+    <span class="decor-mark mark-7">✦</span>
+  </div>
+
+  <header>
+    <nav>
+      <a href="#about" class="logo">d<span>.dev</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-btn" type="button">Toggle Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+   
+    <section id="about" class="card hero-card">
+      <div class="avatar-wrapper">
+        <div class="avatar-relative">
+          <label class="avatar" for="photo-input" title="Click to upload your photo">
+            <img id="avatar-img" alt="Profile photo" hidden>
+            <span id="avatar-icon">✿</span>
+          </label>
+          <span class="status-pill" title="Active IT student & learner">
+            <span class="status-dot"></span> Available
+          </span>
+        </div>
+        <input type="file" id="photo-input" accept="image/*" class="sr-only">
+        <p class="avatar-caption">Click circle to upload photo</p>
+        <button type="button" id="reset-avatar-btn" class="btn-text" style="display: none;">Remove photo</button>
+      </div>
+
+      <div class="about-content">
+        <div class="badges-row">
+          <span class="badge">1st Year BSIT</span>
+          <span class="badge">UIC</span>
+        </div>
+        <h1>Hello, I'm Queen Danica Mae D. Llagas</h1>
+        <div class="typing-container" aria-label="Role and focus">
+          <span id="typing-text" class="typing-text">1st Year BSIT Student</span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <p class="bio">
+          Welcome to my e-portfolio! I am a first-year student at the University of the Immaculate Conception currently taking up BSIT (Bachelor of Science in Information Technology), exploring web development with HTML, CSS, and JavaScript, with a strong interest in UI/UX design.
+        </p>
+        <div class="button-group">
+          <a href="#projects" class="btn btn-primary">My Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p class="section-subtitle">Academic background</p>
+
+      <div class="card education-card">
+        <div class="education-header">
+          <span class="education-badge">Current</span>
+          <span class="education-year">1st Year</span>
+        </div>
+        <h3>Bachelor of Science in Information Technology (BSIT)</h3>
+        <p class="school-name">University of the Immaculate Conception</p>
+        <p class="education-desc">
+          Currently in my first year taking up BSIT, building foundational skills in computer concepts, programming, and web development.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>What I'm Learning & Interests</h2>
+      <p class="section-subtitle">Web technologies, software development, and design areas I am exploring.</p>
+
+      <div class="skills-grid">
+        <div class="card skill-card">
+          <span class="skill-pill">JAVA</span>
+          <h3>Object-Oriented Programming</h3>
+          <p>Building scalable, maintainable apps using classes, interfaces, and inheritance.</p>
+        </div>
+
+        <div class="card skill-card">
+          <span class="skill-pill">HTML</span>
+          <h3>Semantic Structure</h3>
+          <p>Writing clean, accessible tags and semantic page elements.</p>
+        </div>
+
+        <div class="card skill-card">
+          <span class="skill-pill">CSS</span>
+          <h3>Styling & Layout</h3>
+          <p>Customizing colors, card layouts, responsive design, and dark theme.</p>
+        </div>
+
+        <div class="card skill-card">
+          <span class="skill-pill">JavaScript</span>
+          <h3>Interactivity</h3>
+          <p>Handling click events, theme toggling, clipboard copy, and photo upload.</p>
+        </div>
+
+        <div class="card skill-card">
+          <span class="skill-pill">Interest</span>
+          <h3>UI/UX Design</h3>
+          <p>Eager to learn user interface design, wireframing, and crafting clean, user-friendly experiences.</p>
+        </div>
+      </div>
+    </section>
+
+  
+    <section id="projects">
+      <h2>My Projects</h2>
+      <p class="section-subtitle">Current coursework and portfolio practice</p>
+
+      <div class="filter-bar">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="web">Web Dev</button>
+        <button type="button" class="filter-btn" data-filter="uiux">UI/UX</button>
+        <button type="button" class="filter-btn" data-filter="java">Java</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="card project-card" data-category="web">
+          <div class="project-tag">Completed</div>
+          <h3>Personal E-Portfolio</h3>
+          <p class="project-description">
+            An e-portfolio built using HTML, CSS, and Vanilla JavaScript. Includes light/dark mode toggling, custom profile picture upload, and responsive layout.
+          </p>
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </article>
+
+        <article class="card project-card" data-category="uiux">
+          <div class="project-tag tag-subtle">Completed</div>
+          <h3>KAYA</h3>
+          <p class="project-description">
+            KAYA is a digital mental wellness platform designed to bridge self-care management with professional support. Featuring an intuitive high-fidelity UI, it empowers users to track mood trends, practice guided breathing, and schedule seamless consultations with mental health professionals in a single supportive environment.
+          </p>
+          <div class="tech-tags">
+            <span>UI/UX Design</span>
+            <span>Mental Wellness</span>
+            <span>Self-Care</span>
+          </div>
+        </article>
+
+        <article class="card project-card" data-category="java">
+          <div class="project-tag tag-subtle">Completed</div>
+          <h3>Fast &amp; FoodEUS</h3>
+          <p class="project-description">
+            A Java-based console system that simulates fast-food restaurant operations through role-based access control for Admins, Managers, Employees, and Customers—streamlining user management, menu control, order processing, and financial reporting.
+          </p>
+          <div class="tech-tags">
+            <span>Java</span>
+            <span>OOP</span>
+            <span>Console System</span>
+          </div>
+        </article>
+
+        <article class="card project-card placeholder-card" data-category="web">
+          <div class="project-tag tag-subtle">Upcoming</div>
+          <h3>More Projects Coming Soon</h3>
+          <p class="project-description">
+            I will add my laboratory activities, class projects, and programming assignments as I advance through my IT degree.
+          </p>
+          <div class="tech-tags">
+            <span>IT Coursework</span>
+            <span>Web Development</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p class="section-subtitle">Let's connect</p>
+
+      <div class="card contact-card">
+        <p class="contact-note">Feel free to reach out via my institutional email:</p>
+        <div class="email-display">
+          <span id="email-address">qllagas_250000003026@uic.edu.ph</span>
+        </div>
+        <div class="contact-actions">
+          <button type="button" id="copy-email-btn" class="btn btn-primary">Copy Email ✿</button>
+          <a href="mailto:qllagas_250000003026@uic.edu.ph" class="btn btn-secondary">Send Email 💌</a>
+        </div>
+        <p id="copy-status" class="copy-status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="footer-blossoms">✿ ✧ ✿</div>
+    <p>&copy; <span id="year"></span> Queen Danica Mae D. Llagas. All rights reserved.</p>
+  </footer>
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+  <div id="toast" class="toast" role="status" aria-live="polite">Email copied to clipboard!</div>
+
+</body>
+</html>
